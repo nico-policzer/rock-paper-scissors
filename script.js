@@ -68,12 +68,21 @@ function game(userChoice) {
 
     resultsInfo.textContent ="MACHINE: " + cpmChoice + " VS MAN :" + userChoice;
     
+    // TODO: If either player or computer has more than 5 wins, end round and disable button functionality
 
-    // Update score panel divs with outcome
+    if (computerScore >= 5) {
+        resultsHead.textContent = "Game Over. The computer has bested you!";
+        endGame();
+    } else if (userScore >= 5) {
+        resultsHead.textContent = "Game Over. You have defeated the computer!";
+        endGame();
+    }
 
-    // If either player or computer has more than 5 wins, end round and disable button functionality
+}
 
-
+function endGame() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => button.disabled = true);
 }
 
 const buttons = document.querySelectorAll('button');
