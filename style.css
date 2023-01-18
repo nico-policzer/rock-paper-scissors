@@ -1,14 +1,16 @@
 button {
     padding: 30px;
-    background-color: burlywood;
+    background-color: black;
+    color: white;
     border-radius: 10px;
+    width: 30%;
     font: inherit
     
 
 }
 
 body {
-    background-color: rgba(107, 6, 6, 0.3);
+    background-color: rgba(255, 255, 255, 0.588);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,23 +35,41 @@ body > div {
 .panel {
     display: flex;
     gap: 20px;
-    padding: 100px;
-    border-radius: 100%;
+    padding: 50px;
+}
+.panel.machine {
+    border: 4px solid cyan;
 }
 
-.computer-score {
-    background-color: orange;
+.panel.man {
+    border: 4px solid green;
 }
 
-.user-score {
-    background-color: cyan;
-}
+
 
 body > .title {
-background-color: blue;
+background-color: black;
 color: whitesmoke;
 font-size: 50px;
 padding: 30px;
 flex: 0;
-border: 3px solid rgb(236, 75, 75);
+border: 3px solid red;
+}
+
+
+.results {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.results > .header {
+    padding: 40px;
+    background-color: black;
+    color: whitesmoke;
+    border: 3px solid red;
+    width: 20%;
+    text-align: center;
+
 }
