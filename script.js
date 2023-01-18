@@ -6,7 +6,7 @@ const userDisplay = document.querySelector(".user-score");
 compDisplay.textContent = computerScore;
 userDisplay.textContent = userScore;
 
-
+// returns random rock paper scissors choice
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3); // returns num 0, 1 or 2
     switch (num) {
@@ -25,7 +25,7 @@ function getComputerChoice() {
 }
 
 
-// prerequisite: playerSelection is one of "rock", "paper" or "scissors" - case insensitive.
+// prerequisite: selections are one of "rock", "paper" or "scissors" - case insensitive.
 // returns result of rock paper scissors round, 1 = player wins, 0 = computer wins, -1 represents a tie
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -42,9 +42,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game(userChoice) {
     console.log("Game " + userScore)
-    // plays a best of five rock paper scissors game agaisnt the computer. Ties are not counted in the five.
+    // Runs a first to five rock paper scissors game against the computer.
 
-    //let userChoice = prompt("Rock, Paper, Scissors??");
     let cpmChoice = getComputerChoice();
     let outcome = playRound(userChoice, cpmChoice);
     const resultsHead = document.querySelector(".results > .header");
@@ -59,10 +58,6 @@ function game(userChoice) {
         resultsHead.textContent = "Tie! \n";
     }
     
-    
-
-    // const compDisplay = document.querySelector(".computer-score");
-    // const userDisplay = document.querySelector(".user-score");
     compDisplay.textContent = computerScore;
     userDisplay.textContent = userScore;
 
