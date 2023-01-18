@@ -38,11 +38,11 @@ body > div {
     padding: 50px;
 }
 .panel.machine {
-    border: 4px solid cyan;
+    border: 4px solid blue;
 }
 
 .panel.man {
-    border: 4px solid green;
+    border: 4px solid red;
 }
 
 
