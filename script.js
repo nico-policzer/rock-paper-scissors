@@ -47,15 +47,16 @@ function game(userChoice) {
     //let userChoice = prompt("Rock, Paper, Scissors??");
     let cpmChoice = getComputerChoice();
     let outcome = playRound(userChoice, cpmChoice);
-    const results = document.querySelector(".results");
+    const resultsHead = document.querySelector(".results > .header");
+    const resultsInfo = document.querySelector(".results > .info");
     if (outcome == 1) {
         userScore++;
-        results.textContent = "You Win! \n";
+        resultsHead.textContent = "You Win! \n";
     } else if  (outcome == 0) {
         computerScore++;
-        results.textContent = "Computer Wins! \n";
+        resultsHead.textContent = "Computer Wins! \n";
     } else if (outcome == -1){
-        results.textContent = "Tie! \n";
+        resultsHead.textContent = "Tie! \n";
     }
     
     
@@ -65,7 +66,7 @@ function game(userChoice) {
     compDisplay.textContent = computerScore;
     userDisplay.textContent = userScore;
 
-    results.textContent +="\nComputer: " + cpmChoice + " VS User :" + userChoice;
+    resultsInfo.textContent ="MACHINE: " + cpmChoice + " VS MAN :" + userChoice;
     
 
     // Update score panel divs with outcome
