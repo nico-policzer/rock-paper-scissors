@@ -44,3 +44,12 @@ body > div {
 .user-score {
     background-color: cyan;
 }
+
+body > .title {
+background-color: blue;
+color: whitesmoke;
+font-size: 50px;
+padding: 30px;
+flex: 0;
+border: 3px solid rgb(236, 75, 75);
+}
